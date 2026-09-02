@@ -2,24 +2,13 @@ name: Football AI
 
 on:
   schedule:
-    - cron: "0 12 * * *"
-  workflow_dispatch:
-
-jobs:
-  football:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Test
-        run: echo "Football AI is working!"
-name: Football AI
-
-on:
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Test
-        run: echo "Football AI is running!"
+      - name: Test Football AI
+        run: echo "Football AI is running"
