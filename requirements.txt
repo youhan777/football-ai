@@ -1,4 +1,4 @@
 requests
-openai
+huggingface_hub
 Pillow
 python-dotenv
