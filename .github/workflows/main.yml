@@ -1,0 +1,14 @@
+name: Football AI
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+jobs:
+  football:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test
+        run: echo "Football AI is working!"
