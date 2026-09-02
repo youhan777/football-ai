@@ -12,3 +12,14 @@ jobs:
     steps:
       - name: Test
         run: echo "Football AI is working!"
+name: Football AI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo "Football AI is running!"
