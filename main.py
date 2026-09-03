@@ -66,7 +66,7 @@ prompt = f"""
 """
 
 result = client.chat.completions.create(
-  model="Qwen/Qwen2.5-7B-Instruct-1M",
+  model="swiss-ai/Apertus-8B-Instruct-2509:publicai",
     messages=[
         {
             "role": "user",
