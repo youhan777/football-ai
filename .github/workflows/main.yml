@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: تحميل المشروع
         uses: actions/checkout@v4
+        with:
+  persist-credentials: true
 
       - name: تثبيت Python
         uses: actions/setup-python@v5
@@ -28,3 +30,10 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           python main.py
+      - name: حفظ المنشور في GitHub
+        run: |
+          git config --global user.name "Football AI Bot"
+          git config --global user.email "football-ai-bot@users.noreply.github.com"
+          git add latest_post.txt
+          git commit -m "Add latest football post" || exit 0
+          git push
