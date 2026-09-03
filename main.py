@@ -66,7 +66,7 @@ prompt = f"""
 """
 
 result = client.chat.completions.create(
-    model="Qwen/Qwen2.5-7B-Instruct",
+  model="Qwen/Qwen2.5-7B-Instruct-1M",
     messages=[
         {
             "role": "user",
