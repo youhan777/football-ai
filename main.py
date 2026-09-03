@@ -77,7 +77,16 @@ result = client.chat.completions.create(
 )
 
 post = result.choices[0].message.content
+from datetime import datetime
 
+filename = "latest_post.txt"
+
+with open(filename, "w", encoding="utf-8") as file:
+    file.write(f"Football AI Post\n")
+    file.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}\n")
+    file.write("=" * 50 + "\n\n")
+    file.write(post)
+    file.write("\n")
 print("=" * 50)
 print("FOOTBALL AI POST")
 print("=" * 50)
